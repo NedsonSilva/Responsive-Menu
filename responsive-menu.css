@@ -1,0 +1,184 @@
+/* ||||     GERAL    |||||||| */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+header nav a {
+  text-decoration: none;
+  color: #000;
+}
+/*||||  Menu ||||||| */
+header {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 60px;
+  background: #FFF;
+}
+header h1 {
+  font-size: 25px;
+}
+header nav {
+  display: flex;
+  height:100%;
+  width: 85%;
+  margin: 0 auto;
+  justify-content: space-between;
+  align-items: center;
+}
+/*|||||   MENU MAIN ||||||||| */
+.menu {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  background: #FFF;
+  overflow-y: auto;
+}
+
+.menu > li {
+  padding: 0 10px 0 10px ;
+}
+
+.menu > li:last-of-type{
+  padding-right: 0;
+}
+
+/* |||| SUB-MENU  ||||||| */
+.drawer-sub-menu::after {
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 10px;
+  border-top: 4px solid;
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent;
+  transform: rotate(0deg);
+  transition: 300ms;
+}
+
+.drawer-dropdown-sub-menu::after {
+  transform: rotate(180deg);
+  transition: 300ms;
+}
+
+.sub-menu-itens {
+  display: none;
+  position: fixed;
+  top: 60px;
+  width: 250px;
+  list-style: none;
+  background: #FFF;
+  border-top: 1px solid #DDDDDD;
+  line-height: 25px;
+}
+
+.sub-menu-itens li {
+  padding: 10px 0 10px 0;
+  margin: 0;
+}
+
+.sub-menu-active {
+  display: block;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.hamburguer {
+  display:  none;
+  position: relative;
+  top: 20px;
+  right: 20px;
+  width: 34px;
+  height: 34px;
+  border-top: 2px solid black;
+}
+
+.hamburguer::after,
+.hamburguer::before {
+  content: "";
+  display: block;
+  position: relative;
+  width: 34px;
+  height: 2px;
+  background: black;
+  margin-top: 7px;
+  transition: 400ms;
+}
+
+.teste::before {
+  margin-top: 10px;
+  transform: rotate(135deg);
+  transition: 400ms;
+}
+
+.teste::after {
+  top: -9px;
+  transform: rotate(45deg);
+  transition: 400ms;
+}
+
+.teste {
+  border-top-color: rgba(100, 148, 237, 0);
+}
+
+.modal {visibility: hidden}
+
+/*|||||| MENU RESPONSIVE  ||||||||| */
+@media screen and (max-width: 900px) {
+
+  .hamburguer { display: block;}
+
+  .modal-active {
+    visibility: visible;
+    position: fixed;
+    left: 0;
+    top: 60px;
+    width: 100vw;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.200);
+  }
+
+  .menu {
+    position: fixed;
+    right: 0;
+    top: 60px;
+    height: 100%;
+    flex-direction: column;
+    background: #FFF;
+    border-top: 1px solid rgb(236, 236, 236);
+    transform: translateX(100%) scaleX(0);
+    transition: 400ms linear;
+  }
+
+  .menu > li {
+    margin-bottom: 20px;
+    width: 250px;
+  }
+
+  .menu > li:first-of-type {
+    margin-top: 10px;
+  }
+
+  .menu-active {
+    display: flex;
+    transform: translateX(0) scale(1);
+    transition: 400ms linear;
+  }
+  .sub-menu-itens {
+    position: static;
+    width: auto;
+    border: none;
+    margin: 5px 0px 5px 10px;
+  }
+}
+

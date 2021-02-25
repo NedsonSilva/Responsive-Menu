@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu</title>
+  <link rel="stylesheet" href="responsive-menu.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <h1>Off-canvas Menu</h1>
+        <div class="modal"></div>
+          <ul  class="menu">
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">EMPRESA</a></li>
+            <li class="sub-menu">
+              <a href="#">PRODUTOS
+                <span class='drawer-sub-menu drawer-dropdown-sub-menu'></span>
+              </a>
+              <ul class='sub-menu-itens'>
+                <li><a href="#">Acionadores</a></li>
+                <li><a href="#">Centrais de alarme</a></li>
+                <li><a href="#">Sirenes</a></li>
+              </ul>
+            </li>
+            <li><a href="#">EMPRESA</a></li>
+            <li><a href="#">CONTATO</a></li>
+          </ul>
+    </nav>
+    <span class="hamburguer"></span>
+  </header>
+  <main>
+    <h2>Conteudo do site</h2>
+  </main>
+  <script src="menu.js"></script>
+</body>
+</html>

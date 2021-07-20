@@ -8,10 +8,12 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
 }
+
 header nav a {
   text-decoration: none;
   color: #000;
 }
+
 /*||||  Menu ||||||| */
 header {
   display: flex;
@@ -23,17 +25,20 @@ header {
   height: 60px;
   background: #FFF;
 }
+
 header h1 {
   font-size: 25px;
 }
+
 header nav {
   display: flex;
-  height:100%;
+  height: 100%;
   width: 85%;
   margin: 0 auto;
   justify-content: space-between;
   align-items: center;
 }
+
 /*|||||   MENU MAIN ||||||||| */
 .menu {
   display: flex;
@@ -43,11 +48,11 @@ header nav {
   overflow-y: auto;
 }
 
-.menu > li {
-  padding: 0 10px 0 10px ;
+.menu>li {
+  padding: 0 10px 0 10px;
 }
 
-.menu > li:last-of-type{
+.menu>li:last-of-type {
   padding-right: 0;
 }
 
@@ -94,7 +99,7 @@ a:hover {
 }
 
 .hamburguer {
-  display:  none;
+  display: none;
   position: relative;
   top: 20px;
   right: 20px;
@@ -131,12 +136,16 @@ a:hover {
   border-top-color: rgba(100, 148, 237, 0);
 }
 
-.modal {visibility: hidden}
+.modal {
+  visibility: hidden
+}
 
 /*|||||| MENU RESPONSIVE  ||||||||| */
 @media screen and (max-width: 900px) {
 
-  .hamburguer { display: block;}
+  .hamburguer {
+    display: block;
+  }
 
   .modal-active {
     visibility: visible;
@@ -160,12 +169,12 @@ a:hover {
     transition: 400ms linear;
   }
 
-  .menu > li {
+  .menu>li {
     margin-bottom: 20px;
     width: 250px;
   }
 
-  .menu > li:first-of-type {
+  .menu>li:first-of-type {
     margin-top: 10px;
   }
 
@@ -174,6 +183,7 @@ a:hover {
     transform: translateX(0) scale(1);
     transition: 400ms linear;
   }
+
   .sub-menu-itens {
     position: static;
     width: auto;
@@ -181,4 +191,3 @@ a:hover {
     margin: 5px 0px 5px 10px;
   }
 }
-
